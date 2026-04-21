@@ -1,12 +1,7 @@
-/* ====== PRELOADER ====== */
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    setTimeout(() => {
-        preloader.classList.add('hidden');
-        // Trigger initial animations
-        initScrollAnimations();
-        animateCounters();
-    }, 1800);
+// Initialize animations and counters immediately
+document.addEventListener('DOMContentLoaded', () => {
+    initScrollAnimations();
+    animateCounters();
 });
 
 /* ====== CUSTOM CURSOR ====== */
@@ -93,7 +88,8 @@ class Particle {
 }
 
 function initParticles() {
-    const count = Math.min(80, Math.floor((canvas.width * canvas.height) / 15000));
+    const isMobile = window.innerWidth <= 768;
+    const count = isMobile ? 30 : Math.min(80, Math.floor((canvas.width * canvas.height) / 15000));
     particles = [];
     for (let i = 0; i < count; i++) {
         particles.push(new Particle());
