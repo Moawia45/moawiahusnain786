@@ -129,11 +129,11 @@ animateParticles();
 /* ====== TYPING EFFECT ====== */
 const typedTextEl = document.getElementById('typed-text');
 const titles = [
-    'Civil Engineering Student',
-    'Aspiring Researcher',
-    '8th Semester Researcher',
-    'Construction Tech Enthusiast',
-    'Future Project Engineer'
+    'Civil Engineer',
+    'Python Developer',
+    'Construction Automation',
+    'AI Tool Developer',
+    'Data-Driven Engineering'
 ];
 let titleIndex = 0;
 let charIndex = 0;
